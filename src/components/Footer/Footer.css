@@ -1,3 +1,4 @@
+/* 🌐 Footer Section */
 .footer {
   margin: 90px auto; /* maintains margin from top */
   padding: 0 5vw; /* responsive horizontal padding */
@@ -38,6 +39,7 @@
   flex: 1;
   min-width: 250px;
   box-sizing: border-box;
+  transition: border 0.3s ease;
 }
 
 .footer-email-input input {
@@ -55,8 +57,10 @@
   border-radius: 50px;
   background: linear-gradient(264deg, #df8908 -5.09%, #b415ff 106.28%);
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
   white-space: nowrap;
+  border: none;
+  color: white;
 }
 
 .footer-bottom {
@@ -74,6 +78,7 @@
   flex-wrap: wrap; /* wrap social links on small screens */
 }
 
+/* ✨ Hover Effects */
 .footer-email-input:hover {
   border: 2px solid white;
 }
@@ -83,6 +88,8 @@
 }
 
 /* 📱 Responsive Breakpoints */
+
+/* Tablet Screens */
 @media (max-width: 768px) {
   .footer-top {
     flex-direction: column;
@@ -101,16 +108,40 @@
   .footer-bottom-right {
     justify-content: center;
   }
+
+  .footer-subscribe {
+    padding: 12px 30px;
+  }
 }
 
+/* Mobile Screens */
 @media (max-width: 480px) {
+  .footer {
+    margin: 60px auto; /* smaller margin on mobile */
+    padding: 0 3vw;
+    text-align: center;
+  }
+
+  .footer-top-left {
+    text-align: center;
+  }
+
   .footer-email-input {
     flex-direction: column;
     align-items: stretch;
+    gap: 15px;
   }
 
   .footer-subscribe {
     width: 100%;
     text-align: center;
+  }
+
+  .footer-bottom {
+    align-items: center;
+  }
+
+  .footer-bottom-right {
+    justify-content: center;
   }
 }
