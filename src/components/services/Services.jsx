@@ -3,10 +3,16 @@ import './Services.css';
 import theme_pattern from '../../assets/theme_pattern.svg';
 import Services_Data from '../../assets/services_data';
 import arrow_icon from '../../assets/arrow_icon.svg';
+import { motion } from "motion/react"
 
 const Services = () => {
   return (
-    <div id="services" className="services">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.8 }}
+      viewport={{ once: true }}
+      id="services" className="services">
       <div className="services-title">
         <h1>My Services</h1>
         <img src={theme_pattern} alt="" />
@@ -26,7 +32,7 @@ const Services = () => {
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

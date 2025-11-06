@@ -3,10 +3,16 @@ import './MyWork.css';
 import theme_pattern from '../../assets/theme_pattern.svg';
 import mywork_data from '../../assets/mywork_data';
 import arrow_icon from '../../assets/arrow_icon.svg';
+import { motion } from "motion/react"
 
 const Mywork = () => {
   return (
-    <div id="work" className="mywork">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, delay: 0.9 }}
+      viewport={{ once: true }}
+      id="work" className="mywork">
       <div className="mywork-title">
         <h1>My Latest Work</h1>
         <img src={theme_pattern} alt="" />
@@ -20,7 +26,7 @@ const Mywork = () => {
         <p>Show More</p>
         <img src={arrow_icon} alt="" />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

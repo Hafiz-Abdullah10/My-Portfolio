@@ -2,6 +2,7 @@ import React from 'react';
 import './About.css';
 import theme_pattern from '../../assets/theme_pattern.svg';
 import profile_pic from '../../assets/profile_pic.jpeg';
+import { motion } from "motion/react"
 
 const About = () => {
   return (
@@ -10,7 +11,13 @@ const About = () => {
         <h1>About Me</h1>
         <img src={theme_pattern} alt="" />
       </div>
-      <div className="about-section">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.8 }}
+        viewport={{ once: true }}
+        src={profile_pic} alt=""
+        className="about-section">
         <div className="about-left">
           <img src={profile_pic} alt="" />
         </div>
@@ -61,8 +68,14 @@ const About = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="about-achievements">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.7 }}
+        viewport={{ once: true }}
+        src={profile_pic} alt=""
+        className="about-achievements">
         <div className="about-achievement">
           <h1>1+</h1>
           <p>Years of Experience</p>
@@ -77,7 +90,7 @@ const About = () => {
           <h1>1</h1>
           <p>4 Months Internship</p>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

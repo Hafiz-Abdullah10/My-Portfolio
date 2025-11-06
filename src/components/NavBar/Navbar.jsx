@@ -3,12 +3,17 @@ import AnchorLink from 'react-anchor-link-smooth-scroll-v2';
 import './Navbar.css';
 import logo from '../../assets/logo.svg';
 import underline from '../../assets/nav_underline.svg';
+import { motion } from "motion/react"
 
 const Navbar = () => {
   const [menu, setMenu] = useState('home');
 
   return (
-    <div className="navbar">
+    <motion.div
+    initial={{opacity: 0, y: -50}}
+    animate={{opacity: 1, y: 0}}
+    transition={{duration: 0.6 , ease: 'easeOut'}}
+    className="navbar">
       <img src={logo} alt="" />
       <ul className="nav-menu">
         <li>
@@ -48,7 +53,7 @@ const Navbar = () => {
           Connect with Me
         </AnchorLink>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

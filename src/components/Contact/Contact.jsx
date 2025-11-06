@@ -4,6 +4,7 @@ import theme_pattern from '../../assets/theme_pattern.svg';
 import mail_icon from '../../assets/mail_icon.svg';
 import location_icon from '../../assets/location_icon.svg';
 import call_icon from '../../assets/call_icon.svg';
+import { motion } from "motion/react"
 
 const Contact = () => {
   const [result, setResult] = React.useState('');
@@ -32,7 +33,12 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="contact">
+    <motion.div
+    initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 1 }}
+      viewport={{ once: true }}
+    id="contact" className="contact">
       <div className="contact-title">
         <h1>Get in Touch</h1>
         <img src={theme_pattern} alt="" />
@@ -78,7 +84,7 @@ const Contact = () => {
           </button>
         </form>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

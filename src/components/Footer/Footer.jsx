@@ -2,10 +2,16 @@ import React from 'react';
 import './Footer.css';
 import footer_logo from '../../assets/footer_logo.svg';
 import user_icon from '../../assets/user_icon.svg';
+import { motion } from "motion/react"
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <motion.div
+    initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 1.2 }}
+      viewport={{ once: true }}
+    className="footer">
       <div className="footer-top">
         <div className="footer-top-left">
           <img src={footer_logo} alt="" />
@@ -30,7 +36,7 @@ const Footer = () => {
           <p>Connect with Me</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
