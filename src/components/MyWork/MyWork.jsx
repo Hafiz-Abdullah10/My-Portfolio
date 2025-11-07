@@ -3,7 +3,7 @@ import './MyWork.css';
 import theme_pattern from '../../assets/theme_pattern.svg';
 import mywork_data from '../../assets/mywork_data';
 import arrow_icon from '../../assets/arrow_icon.svg';
-import { motion } from "motion/react"
+import { motion } from "motion/react";
 
 const Mywork = () => {
   return (
@@ -12,16 +12,29 @@ const Mywork = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: 0.9 }}
       viewport={{ once: true }}
-      id="work" className="mywork">
+      id="work"
+      className="mywork"
+    >
       <div className="mywork-title">
         <h1>My Latest Work</h1>
         <img src={theme_pattern} alt="" />
       </div>
+
+      {/* ✅ clickable images */}
       <div className="mywork-container">
-        {mywork_data.map((work, index) => {
-          return <img key={index} src={work.w_img} alt="" />;
-        })}
+        {mywork_data.map((work, index) => (
+          <a
+            key={index}
+            href={work.link}                // 👈 project link (from your data)
+            target="_blank"                 // 👈 opens in new tab
+            rel="noopener noreferrer"       // 👈 security best practice
+            className="mywork-item"
+          >
+            <img src={work.w_img} alt={work.title || `Project ${index + 1}`} />
+          </a>
+        ))}
       </div>
+
       <div className="mywork-showmore">
         <p>Show More</p>
         <img src={arrow_icon} alt="" />

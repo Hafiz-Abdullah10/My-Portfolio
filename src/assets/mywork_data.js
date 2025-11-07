@@ -1,4 +1,4 @@
-import project1_img from '../assets/project_1.svg';
+import project1_img from '../assets/project_1.png';
 import project2_img from '../assets/project_2.svg';
 import project3_img from '../assets/project_3.svg';
 import project4_img from '../assets/project_4.svg';
@@ -9,6 +9,7 @@ const mywork_data = [
   {
     w_no: 1,
     w_name: 'Web design',
+    link: 'https://blog-site-client-inky.vercel.app/',
     w_img: project1_img,
   },
   {
