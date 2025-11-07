@@ -1,0 +1,114 @@
+.mywork {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin: 80px auto;
+  padding: 0 5vw; /* responsive horizontal padding */
+  max-width: 1200px; /* keeps section centered and contained */
+}
+
+.mywork-title {
+  position: relative;
+  text-align: center;
+}
+
+.mywork-title h1 {
+  padding: 0 20px;
+  font-size: clamp(40px, 6vw, 80px); /* responsive title */
+  font-weight: 600;
+}
+
+.mywork-title img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 100px;
+  max-width: 30%;
+}
+
+.mywork-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* responsive grid */
+  gap: 40px;
+  width: 100%;
+}
+
+.mywork-container img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10; /* keeps image proportionate */
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s, border 0.3s;
+  cursor: pointer;
+}
+
+.mywork-container img:hover {
+  transform: scale(1.05);
+  border: 2px solid #ff00ff;
+}
+
+.mywork-showmore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border-radius: 50px;
+  border: 2px solid white;
+  padding: 20px 50px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 80px;
+  transition: 0.6s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.mywork-showmore:hover {
+  gap: 30px;
+  border: 2px solid #ff00ff;
+  background: linear-gradient(45deg, #3f0028, #582300);
+}
+
+/* 📱 Responsive Adjustments */
+@media (max-width: 1024px) {
+  .mywork {
+    gap: 60px;
+  }
+
+  .mywork-container {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mywork {
+    gap: 50px;
+  }
+
+  .mywork-title h1 {
+    font-size: 40px;
+  }
+
+  .mywork-showmore {
+    padding: 15px 35px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mywork {
+    padding: 0 4vw;
+  }
+
+  .mywork-container {
+    grid-template-columns: 1fr; /* single column on mobile */
+  }
+
+  .mywork-title img {
+    display: none; /* hide background image if overlaps */
+  }
+}

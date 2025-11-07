@@ -1,0 +1,121 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px auto;
+  padding: 0 5vw;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  z-index: 1000;
+}
+
+/* ---------- Navigation Menu ---------- */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 40px;
+  font-size: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.nav-menu li {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.nav-menu li:hover {
+  transform: scale(1.05);
+}
+
+.nav-menu li img {
+  display: flex;
+  margin: auto;
+}
+
+/* ---------- Connect Button ---------- */
+.nav-connect {
+  padding: 15px 35px;
+  border-radius: 50px;
+  background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.06%);
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  white-space: nowrap;
+  color: #fff;
+  border: none;
+  text-align: center;
+}
+
+.nav-connect:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* ---------- Links ---------- */
+.anchor-link {
+  text-decoration: none;
+  color: white;
+}
+
+/* ---------- Responsive Adjustments ---------- */
+
+/* Medium screens (tablets ≤1024px) */
+@media (max-width: 1024px) {
+  .nav-menu {
+    gap: 30px;
+    font-size: 16px;
+  }
+
+  .nav-connect {
+    padding: 12px 25px;
+    font-size: 15px;
+  }
+}
+
+/* Tablets & small laptops (≤768px) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 20px;
+    font-size: 17px;
+  }
+
+  .nav-connect {
+    padding: 12px 30px;
+    font-size: 15px;
+  }
+}
+
+/* Mobile phones (≤480px) */
+@media (max-width: 480px) {
+  .navbar {
+    margin: 15px auto;
+    padding: 0 4vw;
+    gap: 15px;
+  }
+
+  .nav-menu {
+    gap: 15px;
+    font-size: 15px;
+  }
+
+  .nav-connect {
+    width: 100%;
+    max-width: 250px;
+    font-size: 14px;
+    padding: 10px 25px;
+  }
+}
