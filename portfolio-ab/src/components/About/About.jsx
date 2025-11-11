@@ -2,7 +2,7 @@ import React from 'react';
 import './About.css';
 import theme_pattern from '../../assets/theme_pattern.svg';
 import profile_pic from '../../assets/profile_pic.jpeg';
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (

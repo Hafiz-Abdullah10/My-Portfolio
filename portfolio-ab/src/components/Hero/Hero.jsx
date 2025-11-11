@@ -3,7 +3,7 @@ import './Hero.css';
 import profile_pic from '../../assets/profile_pic.jpeg';
 import AnchorLink from 'react-anchor-link-smooth-scroll-v2';
 import resume from '../../assets/resume.pdf';
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
