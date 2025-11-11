@@ -34,11 +34,11 @@ const Contact = () => {
 
   return (
     <motion.div
-    initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 1 }}
       viewport={{ once: true }}
-    id="contact" className="contact">
+      id="contact" className="contact">
       <div className="contact-title">
         <h1>Get in Touch</h1>
         <img src={theme_pattern} alt="" />
@@ -68,21 +68,25 @@ const Contact = () => {
           </div>
         </div>
         <form onSubmit={onSubmit} className="contact-right">
-          <label htmlFor="">Your Name</label>
-          <input type="text" placeholder="Enter Your Name" name="Name" />
-          <label htmlFor="">Your Email</label>
-          <input type="email" placeholder="Enter Your Email" name="email" />
-          <label htmlFor="">Write Your Message Here</label>
+          <label htmlFor="name">Your Name</label>
+          <input id="name" type="text" placeholder="Enter Your Name" name="name" />
+
+          <label htmlFor="email">Your Email</label>
+          <input id="email" type="email" placeholder="Enter Your Email" name="email" />
+
+          <label htmlFor="message">Write Your Message Here</label>
           <textarea
+            id="message"
             name="message"
-            id=""
             rows="8"
             placeholder="Enter Your Message"
           ></textarea>
+
           <button type="submit" className="contact-submit">
             Submit Now
           </button>
         </form>
+
       </div>
     </motion.div>
   );
