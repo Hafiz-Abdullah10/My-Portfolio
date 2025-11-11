@@ -3,7 +3,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll-v2';
 import './Navbar.css';
 import logo from '../../assets/logo.svg';
 import underline from '../../assets/nav_underline.svg';
-import { motion } from "motion/react"
+import { motion } from "motion/react";
 
 const Navbar = () => {
   const [menu, setMenu] = useState('home');
