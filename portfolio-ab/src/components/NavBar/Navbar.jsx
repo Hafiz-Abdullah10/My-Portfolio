@@ -14,7 +14,7 @@ const Navbar = () => {
     animate={{opacity: 1, y: 0}}
     transition={{duration: 0.6 , ease: 'easeOut'}}
     className="navbar">
-      <img src={logo} alt="" />
+      
       <ul className="nav-menu">
         <li>
           <AnchorLink className="anchor-link" href="#home">
